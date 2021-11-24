@@ -1,20 +1,15 @@
-<template>
-</template>
+<template></template>
 
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
     name: 'Top',
-    components: {
-    },
+    components: {},
     data() {
-        return {
-        };
+        return {};
     },
-    methods: {
-    },
-    computed: {
-    },
+    methods: {},
+    computed: {},
 });
 </script>
 
