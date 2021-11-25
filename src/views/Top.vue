@@ -14,6 +14,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Config from '../config';
+import ItemsCard from '../components/Items-card.vue'
 
 export default Vue.extend({
     name: 'Top',
