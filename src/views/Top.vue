@@ -8,17 +8,21 @@
                 <v-select :items="sort" label="Sort by:" dense solo></v-select>
             </v-col>
         </v-row>
+        <ItemsCard :items="cars" />
     </v-container>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Config from '../config';
-import ItemsCard from '../components/Items-card.vue'
+import ItemsCard from '../components/Items-card.vue';
+import Car from '../models/car';
 
 export default Vue.extend({
     name: 'Top',
-    components: {},
+    components: {
+        ItemsCard,
+    },
     data() {
         return {
             category: [
@@ -34,9 +38,33 @@ export default Vue.extend({
                 Config.category.bmw,
             ],
             sort: [Config.sort.priceLowHigh, Config.sort.priceHighLow, Config.sort.newestArrivals],
+            cars: [] as Array<Car>,
         };
     },
-    methods: {},
+    created: function () {
+        this.createCars();
+    },
+
+    methods: {
+        createCars(): void {
+            this.cars.push(
+                new Car(
+                    Config.model.model3.name,
+                    Config.model.model3.category,
+                    Config.model.model3.price,
+                    Config.model.model3.date
+                )
+            );
+            this.cars.push(
+                new Car(
+                    Config.model.modelX.name,
+                    Config.model.modelX.category,
+                    Config.model.modelX.price,
+                    Config.model.modelX.date
+                )
+            );
+        },
+    },
     computed: {},
 });
 </script>
