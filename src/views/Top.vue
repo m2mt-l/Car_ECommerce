@@ -13,24 +13,26 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import Config from '../config';
+
 export default Vue.extend({
     name: 'Top',
     components: {},
     data() {
         return {
             category: [
-                'Tesla',
-                'Porsche',
-                'Toyota',
-                'Honda',
-                'Mazda',
-                'Mercedes-Benz',
-                'Lexus',
-                'Lamborghini',
-                'Audi',
-                'BMW',
+                Config.category.tesla,
+                Config.category.porsche,
+                Config.category.toyota,
+                Config.category.honda,
+                Config.category.mazda,
+                Config.category.mercedes,
+                Config.category.lexus,
+                Config.category.lamborghini,
+                Config.category.audi,
+                Config.category.bmw,
             ],
-            sort: ['Price: Low to High', 'Price: High to Low', 'Newest Arrivals'],
+            sort: [Config.sort.priceLowHigh, Config.sort.priceHighLow, Config.sort.newestArrivals],
         };
     },
     methods: {},

@@ -7,6 +7,12 @@ interface Config {
             date: number[];
         };
     };
+    category: {
+        [key: string]: string;
+    };
+    sort: {
+        [key: string]: string;
+    };
 }
 
 const config: Config = {
@@ -151,6 +157,25 @@ const config: Config = {
             date: [2019, 1, 15],
         },
     },
+
+    category: {
+        tesla: 'Tesla',
+        porsche: 'Porsche',
+        toyota: 'Toyota',
+        honda: 'Honda',
+        mazda: 'Mazda',
+        mercedes: 'Mercedes-Benz',
+        lexus: 'Lexus',
+        lamborghini: 'Lamborghini',
+        audi: 'Audi',
+        bmw: 'BMW',
+    },
+
+    sort: {
+        priceLowHigh: 'Price: Low to High',
+        priceHighLow: 'Price: High to Low',
+        newestArrivals: 'Newest Arrivals',
+    },
 };
 
-export default Config;
+export default config;
