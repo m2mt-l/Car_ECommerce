@@ -50,6 +50,7 @@ export default Vue.extend({
             this.cars.push(
                 new Car(
                     Config.model.model3.name,
+                    Config.model.model3.img,
                     Config.model.model3.category,
                     Config.model.model3.price,
                     Config.model.model3.date
@@ -58,9 +59,29 @@ export default Vue.extend({
             this.cars.push(
                 new Car(
                     Config.model.modelX.name,
+                    Config.model.modelX.img,
                     Config.model.modelX.category,
                     Config.model.modelX.price,
                     Config.model.modelX.date
+                )
+            );
+            
+            this.cars.push(
+                new Car(
+                    Config.model.modelS.name,
+                    Config.model.modelS.img,
+                    Config.model.modelS.category,
+                    Config.model.modelS.price,
+                    Config.model.modelS.date
+                )
+            );
+            this.cars.push(
+                new Car(
+                    Config.model.modelY.name,
+                    Config.model.modelY.img,
+                    Config.model.modelY.category,
+                    Config.model.modelY.price,
+                    Config.model.modelY.date
                 )
             );
         },
