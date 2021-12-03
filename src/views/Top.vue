@@ -2,13 +2,25 @@
     <v-container>
         <v-row align="center">
             <v-col class="d-flex" cols="12" sm="6">
-                <v-select :items="category" label="Category" dense solo></v-select>
+                <v-select
+                    v-model="selectedCategory"
+                    :items="category"
+                    label="Category"
+                    dense
+                    solo
+                ></v-select>
             </v-col>
             <v-col class="d-flex" cols="12" sm="6">
-                <v-select :items="sort" label="Sort by:" dense solo></v-select>
+                <v-select
+                    v-model="selectedSort"
+                    :items="sort"
+                    label="Sort by:"
+                    dense
+                    solo
+                ></v-select>
             </v-col>
         </v-row>
-        <ItemsCard :items="cars" />
+        <ItemsCard :items="extractCars" />
     </v-container>
 </template>
 
@@ -39,6 +51,8 @@ export default Vue.extend({
             ],
             sort: [Config.sort.priceLowHigh, Config.sort.priceHighLow, Config.sort.newestArrivals],
             cars: [] as Array<Car>,
+            selectedCategory: '',
+            selectedSort: '',
         };
     },
     created: function () {
@@ -65,7 +79,7 @@ export default Vue.extend({
                     Config.model.modelX.date
                 )
             );
-            
+
             this.cars.push(
                 new Car(
                     Config.model.modelS.name,
@@ -230,7 +244,18 @@ export default Vue.extend({
             );
         },
     },
-    computed: {},
+    computed: {
+        extractCars(): Car[] {
+            if (this.selectedCategory === '') return this.cars;
+            let cars: Car[] = [];
+            this.cars.forEach((car: Car) => {
+                if (car.category === this.selectedCategory) {
+                    cars.push(car);
+                }
+            });
+            return cars;
+        },
+    },
 });
 </script>
 
