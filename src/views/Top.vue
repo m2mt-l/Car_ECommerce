@@ -20,7 +20,7 @@
                 ></v-select>
             </v-col>
         </v-row>
-        <ItemsCard :items="extractCars" />
+        <ItemsCard :items="sortedCars" />
     </v-container>
 </template>
 
@@ -254,6 +254,28 @@ export default Vue.extend({
                 }
             });
             return cars;
+        },
+
+        sortedCars(): Car[] {
+            let cars: Car[] = [];
+            this.extractCars.forEach((car: Car) => {
+                cars.push(car);
+            });
+            switch (this.selectedSort) {
+                case Config.sort.priceLowHigh:
+                    return cars.sort((a: Car, b: Car) => a.price - b.price);
+                case Config.sort.priceHighLow:
+                    return cars.sort((a: Car, b: Car) => b.price - a.price);
+                case Config.sort.newestArrivals:
+                    return cars.sort((a: Car, b: Car) =>
+                        new Date(a.date[0], a.date[1], a.date[2]) <
+                        new Date(b.date[0], b.date[1], b.date[2])
+                            ? 1
+                            : -1
+                    );
+                default:
+                    return this.extractCars;
+            }
         },
     },
 });
