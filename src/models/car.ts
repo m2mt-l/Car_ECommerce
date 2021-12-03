@@ -1,9 +1,9 @@
 class Car {
     private name: string;
     private img: string;
-    private category: string;
-    private price: number;
-    private date: number[];
+    public category: string;
+    public price: number;
+    public date: number[];
 
     constructor(name: string, img: string, category: string, price: number, date: number[]) {
         this.name = name;

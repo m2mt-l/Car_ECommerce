@@ -30,14 +30,12 @@ export default Vue.extend({
         },
     },
     methods: {
-        getImgPath(): string{
-            const img = '@/assets/model3.jpeg'
+        getImgPath(): string {
+            const img = '@/assets/model3.jpeg';
             return require('@/assets/model3.jpeg');
-        }
+        },
     },
-    computed: {
-        
-    },
+    computed: {},
 });
 </script>
 
