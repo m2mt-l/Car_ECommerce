@@ -14,13 +14,17 @@ interface Config {
     sort: {
         [key: string]: string;
     };
+
+    imgData: {
+        [key: string]: string;
+    };
 }
 
 const config: Config = {
     model: {
         model3: {
             name: 'Model 3',
-            img: '@/assets/model3.jpeg',
+            img: require('@/assets/model3.jpeg'),
             category: 'Tesla',
             price: 48490,
             date: [2020, 9, 4],
@@ -28,7 +32,7 @@ const config: Config = {
 
         modelX: {
             name: 'Model X',
-            img: '@/assets/modelx.jpeg',
+            img: require('@/assets/modelx.jpeg'),
             category: 'Tesla',
             price: 89990,
             date: [2017, 8, 8],
@@ -36,7 +40,7 @@ const config: Config = {
 
         modelS: {
             name: 'Model S',
-            img: '@/assets/models.jpeg',
+            img: require('@/assets/models.jpeg'),
             category: 'Tesla',
             price: 82990,
             date: [2019, 4, 1],
@@ -44,7 +48,7 @@ const config: Config = {
 
         modelY: {
             name: 'Model Y',
-            img: '@/assets/modely.jpeg',
+            img: require('@/assets/modelx.jpeg'),
             category: 'Tesla',
             price: 48190,
             date: [2020, 2, 2],
@@ -52,7 +56,7 @@ const config: Config = {
 
         cayenne: {
             name: 'Cayenne',
-            img: '@/assets/Cayenne.jpeg',
+            img: require('@/assets/Cayenne.jpeg'),
             category: 'Porsche',
             price: 67500,
             date: [2017, 12, 20],
@@ -60,7 +64,7 @@ const config: Config = {
 
         macan: {
             name: 'Macan',
-            img: '@/assets/Macan.jpeg',
+            img: require('@/assets/Macan.jpeg'),
             category: 'Porsche',
             price: 52100,
             date: [2019, 7, 12],
@@ -68,7 +72,7 @@ const config: Config = {
 
         camry: {
             name: 'Camry',
-            img: '@/assets/Camry.jpeg',
+            img: require('@/assets/Camry.jpeg'),
             category: 'Toyota',
             price: 24425,
             date: [2015, 6, 29],
@@ -76,7 +80,7 @@ const config: Config = {
 
         accord: {
             name: 'Accord',
-            img: '@/assets/Accord.jpeg',
+            img: require('@/assets/Accord.jpeg'),
             category: 'Honda',
             price: 24800,
             date: [2018, 10, 2],
@@ -84,7 +88,7 @@ const config: Config = {
 
         civic: {
             name: 'Civic',
-            img: '@/assets/Civic.jpeg',
+            img: require('@/assets/Civic.jpeg'),
             category: 'Honda',
             price: 20650,
             date: [2015, 4, 4],
@@ -92,7 +96,7 @@ const config: Config = {
 
         cx5: {
             name: 'CX-5',
-            img: '@/assets/CX-5.jpeg',
+            img: require('@/assets/CX-5.jpeg'),
             category: 'Mazda',
             price: 26940,
             date: [2012, 11, 3],
@@ -100,7 +104,7 @@ const config: Config = {
 
         gleCoupe: {
             name: 'GLE Coupe',
-            img: '@/assets/GLECoupe.jpeg',
+            img: require('@/assets/GLECoupe.jpeg'),
             category: 'Mercedes-Benz',
             price: 76500,
             date: [2020, 2, 5],
@@ -108,7 +112,7 @@ const config: Config = {
 
         cla: {
             name: 'CLA',
-            img: '@/assets/CLA.jpeg',
+            img: require('@/assets/CLA.jpeg'),
             category: 'Mercedes-Benz',
             price: 37850,
             date: [2019, 6, 9],
@@ -116,7 +120,7 @@ const config: Config = {
 
         gla250: {
             name: 'GLA 250',
-            img: '@/assets/GLA250.jpeg',
+            img: require('@/assets/GLA250.jpeg'),
             category: 'Mercedes-Benz',
             price: 37280,
             date: [2017, 5, 2],
@@ -124,7 +128,7 @@ const config: Config = {
 
         rx350: {
             name: 'RX 350',
-            img: '@/assets/RX350.jpeg',
+            img: require('@/assets/RX350.jpeg'),
             category: 'Lexus',
             price: 45175,
             date: [2015, 1, 1],
@@ -132,7 +136,7 @@ const config: Config = {
 
         nx300: {
             name: 'NX 300',
-            img: '@/assets/NX300.jpeg',
+            img: require('@/assets/NX300.jpeg'),
             category: 'Lexus',
             price: 37510,
             date: [2018, 9, 12],
@@ -140,7 +144,7 @@ const config: Config = {
 
         urus: {
             name: 'Urus',
-            img: '@/assets/Urus.jpeg',
+            img: require('@/assets/Urus.jpeg'),
             category: 'Lamborghini',
             price: 218000,
             date: [2021, 8, 16],
@@ -148,7 +152,7 @@ const config: Config = {
 
         aventador: {
             name: 'Aventador',
-            img: '@/assets/Aventador.jpeg',
+            img: require('@/assets/Aventador.jpeg'),
             category: 'Lamborghini',
             price: 393695,
             date: [2020, 9, 11],
@@ -156,7 +160,7 @@ const config: Config = {
 
         a3: {
             name: 'A3',
-            img: '@/assets/A3.jpeg',
+            img: require('@/assets/A3.jpeg'),
             category: 'Audi',
             price: 33500,
             date: [2019, 5, 8],
@@ -164,7 +168,7 @@ const config: Config = {
 
         x3: {
             name: 'X3',
-            img: '@/assets/X3.jpeg',
+            img: require('@/assets/X3.jpeg'),
             category: 'BMW',
             price: 43000,
             date: [2018, 3, 11],
@@ -172,7 +176,7 @@ const config: Config = {
 
         series2: {
             name: '2 Series',
-            img: '@/assets/2Series.jpeg',
+            img: require('@/assets/2Series.jpeg'),
             category: 'BMW',
             price: 37500,
             date: [2019, 1, 15],
@@ -196,6 +200,29 @@ const config: Config = {
         priceLowHigh: 'Price: Low to High',
         priceHighLow: 'Price: High to Low',
         newestArrivals: 'Newest Arrivals',
+    },
+
+    imgData: {
+        model3: require('@/assets/model3.jpeg'),
+        modelX: require('@/assets/modelx.jpeg'),
+        modelS: require('@/assets/models.jpeg'),
+        modelY: require('@/assets/modely.jpeg'),
+        cayenne: require('@/assets/Cayenne.jpeg'),
+        macan: require('@/assets/Macan.jpeg'),
+        camry: require('@/assets/Camry.jpeg'),
+        accord: require('@/assets/Accord.jpeg'),
+        civic: require('@/assets/Civic.jpeg'),
+        cx5: require('@/assets/CX-5.jpeg'),
+        gleCoupe: require('@/assets/GLECoupe.jpeg'),
+        cla: require('@/assets/CLA.jpeg'),
+        gla250: require('@/assets/GLA250.jpeg'),
+        rx350: require('@/assets/RX350.jpeg'),
+        nx300: require('@/assets/NX300.jpeg'),
+        urus: require('@/assets/Urus.jpeg'),
+        aventador: require('@/assets/Aventador.jpeg'),
+        a3: require('@/assets/A3.jpeg'),
+        x3: require('@/assets/X3.jpeg'),
+        series2: require('@/assets/2Series.jpeg'),
     },
 };
 

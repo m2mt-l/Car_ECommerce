@@ -48,11 +48,15 @@ export default Vue.extend({
                 Config.category.lamborghini,
                 Config.category.audi,
                 Config.category.bmw,
-            ],
-            sort: [Config.sort.priceLowHigh, Config.sort.priceHighLow, Config.sort.newestArrivals],
+            ] as Array<string>,
+            sort: [
+                Config.sort.priceLowHigh,
+                Config.sort.priceHighLow,
+                Config.sort.newestArrivals,
+            ] as Array<string>,
             cars: [] as Array<Car>,
-            selectedCategory: '',
-            selectedSort: '',
+            selectedCategory: '' as string,
+            selectedSort: '' as string,
         };
     },
     created: function () {
