@@ -2,7 +2,7 @@
     <v-container fluid>
         <v-row dense>
             <v-col v-for="car in items" :key="car.name">
-                <v-card class="mx-auto" max-width="500" min-width="344" elevation="4" outlined>
+                <v-card class="mx-auto mt-5" max-width="500" min-width="344" elevation="4" outlined>
                     <v-card-title>{{ car.name }}</v-card-title>
                     <v-img height="250" :src="car.img"></v-img>
                     <v-card-text>Category: {{ car.category }}</v-card-text>
