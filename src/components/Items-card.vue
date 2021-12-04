@@ -4,7 +4,7 @@
             <v-col v-for="car in items" :key="car.name">
                 <v-card class="mx-auto" max-width="500" min-width="344" elevation="4" outlined>
                     <v-card-title>{{ car.name }}</v-card-title>
-                    <v-img height="250" :src="getImgPath()"></v-img>
+                    <v-img height="250" :src="car.img"></v-img>
                     <v-card-text>Category: {{ car.category }}</v-card-text>
                     <v-card-text>Price: ${{ car.price }}</v-card-text>
                     <v-card-text
@@ -29,12 +29,7 @@ export default Vue.extend({
             type: Array,
         },
     },
-    methods: {
-        getImgPath(): string {
-            const img = '@/assets/model3.jpeg';
-            return require('@/assets/model3.jpeg');
-        },
-    },
+    methods: {},
     computed: {},
 });
 </script>
