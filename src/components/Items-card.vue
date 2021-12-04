@@ -6,7 +6,7 @@
                     <v-card-title>{{ car.name }}</v-card-title>
                     <v-img height="250" :src="car.img"></v-img>
                     <v-card-text>Category: {{ car.category }}</v-card-text>
-                    <v-card-text>Price: ${{ car.price }}</v-card-text>
+                    <v-card-text>Price: ${{ car.price.toLocaleString() }}</v-card-text>
                     <v-card-text
                         >Date:
                         {{ car.date[0] + '-' + car.date[1] + '-' + car.date[2] }}</v-card-text
