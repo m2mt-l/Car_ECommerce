@@ -1,3 +1,9 @@
 module.exports = {
-  transpileDependencies: ["vuetify"],
+    transpileDependencies: ['vuetify'],
+    configureWebpack: {
+        devtool: 'source-map',
+    },
+    outputDir: 'docs',
+    assetsDir: './',
+    publicPath: './',
 };

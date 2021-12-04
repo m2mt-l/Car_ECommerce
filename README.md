@@ -1,4 +1,11 @@
-# car-ecommerce
+# Car Ecommerce
+Recursion Vue.js Project Car Ecommerce
+
+## URL
+https://m2mt-l.github.io/Car_ECommerce/
+
+## Description
+Select Category and choose sort by. Car cards are filtered and sorted accordingly.
 
 ## Project setup
 ```
