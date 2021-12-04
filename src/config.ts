@@ -14,10 +14,6 @@ interface Config {
     sort: {
         [key: string]: string;
     };
-
-    imgData: {
-        [key: string]: string;
-    };
 }
 
 const config: Config = {
@@ -48,7 +44,7 @@ const config: Config = {
 
         modelY: {
             name: 'Model Y',
-            img: require('@/assets/modelx.jpeg'),
+            img: require('@/assets/modely.jpeg'),
             category: 'Tesla',
             price: 48190,
             date: [2020, 2, 2],
@@ -200,29 +196,6 @@ const config: Config = {
         priceLowHigh: 'Price: Low to High',
         priceHighLow: 'Price: High to Low',
         newestArrivals: 'Newest Arrivals',
-    },
-
-    imgData: {
-        model3: require('@/assets/model3.jpeg'),
-        modelX: require('@/assets/modelx.jpeg'),
-        modelS: require('@/assets/models.jpeg'),
-        modelY: require('@/assets/modely.jpeg'),
-        cayenne: require('@/assets/Cayenne.jpeg'),
-        macan: require('@/assets/Macan.jpeg'),
-        camry: require('@/assets/Camry.jpeg'),
-        accord: require('@/assets/Accord.jpeg'),
-        civic: require('@/assets/Civic.jpeg'),
-        cx5: require('@/assets/CX-5.jpeg'),
-        gleCoupe: require('@/assets/GLECoupe.jpeg'),
-        cla: require('@/assets/CLA.jpeg'),
-        gla250: require('@/assets/GLA250.jpeg'),
-        rx350: require('@/assets/RX350.jpeg'),
-        nx300: require('@/assets/NX300.jpeg'),
-        urus: require('@/assets/Urus.jpeg'),
-        aventador: require('@/assets/Aventador.jpeg'),
-        a3: require('@/assets/A3.jpeg'),
-        x3: require('@/assets/X3.jpeg'),
-        series2: require('@/assets/2Series.jpeg'),
     },
 };
 
