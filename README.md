@@ -1,4 +1,10 @@
-# car-ecommerce
+# Car Ecommerce
+Recursion Vue.js Project Car Ecommerce
+
+## URL
+
+## Description
+Select Category and choose sort by. Car cards are filtered and sorted accordingly.
 
 ## Project setup
 ```
